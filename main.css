@@ -1,0 +1,142 @@
+/* ESTILOS */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-repeat: no-repeat;
+    background-image: url(/images/top.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+     /* BARRA */
+#bar{
+    position: absolute;
+    background: linear-gradient(to bottom, #121212 50%, rgba(45, 47, 48, .3), rgba(243, 183, 3, 0.699));
+    width: 13%;
+    height: 100%;
+    opacity: .9;
+    left: -230px;
+    transition: all 500ms linear;
+}
+
+    /* BOTON */
+#logo{
+    position: relative;
+    text-align: center;
+    color: #F3B803;
+    background: rgba(45, 47, 48, 0.5);
+    margin: 0 auto;
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium';
+    align-content: center;
+    justify-content: center;
+}
+
+    /* BOTON */
+
+#but{
+    position: absolute;
+    top: 10px;
+    left: 1%;
+    font-size: 50px;
+    color: rgba(45, 47, 48, .3);
+    transition: all 500ms linear;
+
+}#arrow{ cursor: pointer;}
+
+    /* LISTA */
+
+#list{
+    position: static;
+    color: rgba(225, 225, 225, .9);
+    display: grid;
+    grid-gap: 30px;
+    padding-top: 30px;
+}
+#list .list{
+    list-style: none;
+    font-family: fantasy;
+    font-size: 20px;
+    text-align: center;
+    border-left: 5px solid #F3B803;
+    padding: 10px;
+}
+
+    /* CONTENIDO */
+
+#cont{
+    position: fixed;
+    width: 90%;
+    height: 84%;
+    margin:0 auto;
+    padding:0;
+    left: 5%;
+    top: 6%;
+    transition: all 500ms linear;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas: "c1 c2 c3";
+
+    /*Fuente*/
+    color: rgba(59, 59, 59, 0.7);
+    font-family: fantasy;
+    font-size: 20px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+#c1{
+    background: rgba(230, 230, 230, 0.7);
+    grid-area: c1;
+}
+#c2{
+    background: rgba(202, 201, 201, 0.7);
+    grid-area: c2;
+}
+#c3{
+    background: rgba(146, 146, 146, 0.7);
+    grid-area: c3;
+}
+
+ /* FOOTER */
+
+ #footer{
+    width: 87%;
+    height: 5%;
+    bottom: 0px;
+    right: -87%;
+    transition: all 500ms linear;
+    position: fixed;
+    background: linear-gradient(to left, rgba(32, 32, 32, 0.2) 30%, rgba(206, 156, 5, 0.329), rgba(243, 183, 3, 0.479));
+    display: grid;
+    /*Fuente*/
+    color: rgba(230, 230, 230, 0.7);
+    font-family: fantasy;
+    font-size: 20px;
+    align-content: center;
+    text-align: center;
+}
+
+    /* JS */
+
+#bar.active{
+    left: 0;
+    border-bottom-right-radius: 0;
+}
+#but.active{
+    transform: rotate(-180deg);
+    left: 13.5%;
+}
+#footer.active{
+    right: 0;
+
+}
+#cont.active{
+    width: 80%;
+    left: 16%;
+}
